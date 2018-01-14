@@ -1,0 +1,24 @@
+<idea-plugin>
+    <id>com.noone4rever.axessors_storm</id>
+    <name>AxessorsStorm</name>
+    <version>0.5</version>
+    <vendor email="noone4rever@gmail.com">NoOne4rever</vendor>
+
+    <description><![CDATA[
+      Axessors library integration for PhpStorm.<br>
+      For more information see <a href="https://github.com/NoOne4rever/Axessors">GitHub page</a>.
+    ]]></description>
+
+    <change-notes><![CDATA[
+      Added initial functionality.
+    ]]></change-notes>
+
+    <idea-version since-build="173.0"/>
+
+    <depends>com.jetbrains.php</depends>
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <daemon.highlightInfoFilter implementation="com.noone4rever.axessors_storm.AxessorsHighlightErrorFilter"/>
+    </extensions>
+</idea-plugin>
