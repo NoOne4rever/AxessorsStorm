@@ -10,6 +10,9 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.regex.Pattern;
 
+/**
+ * Axessors error filter.
+ */
 public class AxessorsHighlightErrorFilter implements HighlightInfoFilter {
 
     private final static String METHOD_NOT_FOUND_PATTERN = "Method '%s.*' not found in.*";
@@ -22,6 +25,12 @@ public class AxessorsHighlightErrorFilter implements HighlightInfoFilter {
         return !isAxessorsAction(description) && !isAxessorsField(highlightInfo, file);
     }
 
+    /**
+     * Checks if an error is caused by Axessors method invocation.
+     *
+     * @param description error description
+     * @return the result of the checkout
+     */
     private boolean isAxessorsAction(String description) {
         Pattern pattern;
         for (String action : ACTIONS) {
@@ -33,6 +42,13 @@ public class AxessorsHighlightErrorFilter implements HighlightInfoFilter {
         return false;
     }
 
+    /**
+     * Checks if an error is caused by "unused" field with Axessors comment.
+     *
+     * @param highlightInfo information about error
+     * @param file PSI file
+     * @return the result of the checkout
+     */
     private boolean isAxessorsField(HighlightInfo highlightInfo, PsiFile file) {
         try {
             PsiElement field = file.findElementAt(highlightInfo.startOffset);
