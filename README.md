@@ -2,7 +2,7 @@
 Axessors plugin for PhpStorm.
 
 ## Installation
-* Download [AxessorsStormJAR](https://github.com/NoOne4rever/AxessorsStorm/releases/download/v0.5/Axessors.jar)
+* Download [AxessorsStormJAR](https://github.com/NoOne4rever/AxessorsStorm/releases/download/v0.5/AxessorsStorm.jar)
 * Launch PhpStorm and open **File|Settings|Plugins**
 * Select option **Install plugin from disk**
 * Select downloaded JAR
