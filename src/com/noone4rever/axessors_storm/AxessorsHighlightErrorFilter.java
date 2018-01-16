@@ -16,9 +16,13 @@ import java.util.regex.Pattern;
  */
 public class AxessorsHighlightErrorFilter implements HighlightInfoFilter {
 
+    /** Pattern of "method not found" error. */
     private final static String METHOD_NOT_FOUND_PATTERN = "Method '%s.*' not found in.*";
+    /** Possible accessors actions. */
     private final static String[] ACTIONS = {"get", "set", "add", "delete", "count", "increment", "decrement"};
+    /** Pattern of "unused private field" error. */
     private final static Pattern UNUSED_FIELD_PATTERN = Pattern.compile("Unused private field \\$.+");
+    /** Pattern of Axessors comment. */
     private final static Pattern AXESSORS_COMMENT_PATTERN = Pattern.compile("#:.+");
 
     /**
